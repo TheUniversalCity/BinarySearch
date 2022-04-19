@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31829.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheUniversalCity.BinarySearch", "TheUniversalCity.BinarySearch\TheUniversalCity.BinarySearch.csproj", "{5F7F60BD-DCE7-41E9-9655-8A928CDCDF82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CI-CD", "CI-CD", "{84DF34F8-BF3B-4F64-86F5-354DA09E895C}"
+	ProjectSection(SolutionItems) = preProject
+		CI-CD\azure-versioning-nuget-pack-pipeline.yml = CI-CD\azure-versioning-nuget-pack-pipeline.yml
+		CI-CD\gitversion.yml = CI-CD\gitversion.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F7F60BD-DCE7-41E9-9655-8A928CDCDF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F7F60BD-DCE7-41E9-9655-8A928CDCDF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F7F60BD-DCE7-41E9-9655-8A928CDCDF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F7F60BD-DCE7-41E9-9655-8A928CDCDF82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDECE74A-C247-4210-8CEF-C03E5FCF0244}
+	EndGlobalSection
+EndGlobal
