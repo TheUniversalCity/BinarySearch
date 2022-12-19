@@ -51,33 +51,33 @@ namespace TheUniversalCity.BinarySearch
         }
 
         public static int FindNearestIndex<TEntity, TFindValue>(
-            TEntity[] sortedEntityCollection, 
-            TFindValue findValue, 
-            Func<TEntity, TFindValue, ComparisonResults> comparisonLambda)
+    TEntity[] sortedEntityCollection,
+    TFindValue findValue,
+    Func<TEntity, TFindValue, ComparisonResults> comparisonLambda)
         {
-            int startIndex = 0;
-            int endIndex = sortedEntityCollection.Length - 1;
-            
+            double startIndex = 0;
+            double endIndex = sortedEntityCollection.Length - 1;
+
             while (true)
             {
-                var halfIndex = (endIndex + startIndex) / 2;
+                var halfIndex = (endIndex + startIndex) / 2.0;
 
-                switch (comparisonLambda(sortedEntityCollection[halfIndex], findValue))
+                switch (comparisonLambda(sortedEntityCollection[(int)Math.Round(halfIndex)], findValue))
                 {
                     case ComparisonResults.Equal:
-                        return halfIndex;
+                        return (int)Math.Round(halfIndex);
                     case ComparisonResults.LessThen:
-                        if (halfIndex == startIndex)
+                        if ((int)halfIndex == (int)startIndex)
                         {
-                            return startIndex;
+                            return (int)Math.Round(halfIndex);
                         }
 
                         startIndex = halfIndex;
                         break;
                     case ComparisonResults.GreaterThen:
-                        if (halfIndex == endIndex)
+                        if ((int)halfIndex == (int)endIndex)
                         {
-                            return endIndex;
+                            return (int)Math.Round(halfIndex);
                         }
 
                         endIndex = halfIndex;
